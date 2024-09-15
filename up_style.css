@@ -30,20 +30,24 @@ header {
     display: flex;
     justify-content: left;
     background-color: #2c2c2e;
+    border-bottom: 2px solid #ffd700; /* добавлено для идентичности */
 }
 
 .navbar li {
-    margin: 0 10px;
+    margin: 0;
 }
 
 .navbar a {
-    padding: 15px 25px;
+    display: block;
+    padding: 15px 20px;
     color: #ffd700;
     text-decoration: none;
     font-size: 1.2rem;
+    text-align: center;
 }
 
-.navbar a:hover, .navbar a.active {
+.navbar a:hover,
+.navbar a.active {
     background-color: #ffd700;
     color: #1c1c1e;
 }
@@ -102,7 +106,8 @@ button:hover {
 }
 
 /* Результаты */
-#ResultItog, #ResultSum {
+#ResultItog,
+#ResultSum {
     font-size: 1.2rem;
     color: #ffd700;
     margin-top: 20px;
@@ -112,13 +117,12 @@ button:hover {
 
 /* Удаление стрелок у полей input[type="number"] */
 input[type="number"] {
-    -moz-appearance: textfield; /* Firefox */
-    -webkit-appearance: none; /* Chrome, Safari, Edge */
-    appearance: none; /* Стандартное свойство */
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
-/* Удаление стрелок у полей input[type="number"] в Safari и старых версиях Chrome */
-input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
