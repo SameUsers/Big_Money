@@ -17,7 +17,7 @@ header {
     width: 100%;
     text-align: center;
     border-bottom: 2px solid #ffd700;
-    padding-top:50px;
+    padding-top: 50px;
     margin-bottom: 50px;
     position: relative;
 }
@@ -43,8 +43,7 @@ header {
     font-size: 1.2rem;
 }
 
-.navbar a:hover,
-.navbar a.active {
+.navbar a:hover, .navbar a.active {
     background-color: #ffd700;
     color: #1c1c1e;
 }
@@ -109,7 +108,9 @@ button:hover {
     margin-top: 20px;
     border-bottom: 1px solid #ffd700;
     padding-bottom: 5px;
-}/* Удаление стрелок у полей input[type="number"] */
+}
+
+/* Удаление стрелок у полей input[type="number"] */
 input[type="number"] {
     -moz-appearance: textfield; /* Firefox */
     -webkit-appearance: none; /* Chrome, Safari, Edge */
@@ -117,8 +118,80 @@ input[type="number"] {
 }
 
 /* Удаление стрелок у полей input[type="number"] в Safari и старых версиях Chrome */
-input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-inner-spin-button, 
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+/* Адаптация для планшетов */
+@media (max-width: 1024px) {
+    main {
+        padding: 30px;
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .navbar a {
+        font-size: 1.1rem;
+        padding: 10px 15px;
+    }
+
+    button {
+        font-size: 1.1rem;
+        padding: 10px 15px;
+    }
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    body {
+        justify-content: flex-start;
+    }
+
+    header {
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .navbar {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .navbar a {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    main {
+        padding: 20px;
+        margin-top: 10px;
+        width: 95%;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+
+    input {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    p {
+        font-size: 1rem;
+    }
 }
